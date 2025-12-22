@@ -1,0 +1,102 @@
+[
+  {
+    "id": "author-001",
+    "name": "J.R.R. Tolkien",
+    "bio": "John Ronald Reuel Tolkien fue un escritor, poeta, filólogo y profesor universitario británico, conocido principalmente por ser el autor de las novelas clásicas de fantasía heroica El hobbit y El Señor de los Anillos.",
+    "birthYear": 1892,
+    "deathYear": 1973,
+    "nationality": "Británico",
+    "photo": "https://example.com/authors/tolkien.jpg",
+    "website": "https://www.tolkienestate.com",
+    "genres": ["Fantasía", "Aventura", "Ficción"],
+    "awards": ["Comandante de la Orden del Imperio Británico"],
+    "booksCount": 3,
+    "createdAt": "2024-01-10T08:00:00Z"
+  },
+  {
+    "id": "author-002",
+    "name": "Gabriel García Márquez",
+    "bio": "Gabriel José de la Concordia García Márquez fue un escritor, novelista, cuentista, guionista, editor y periodista colombiano. Considerado uno de los autores más significativos del siglo XX.",
+    "birthYear": 1927,
+    "deathYear": 2014,
+    "nationality": "Colombiano",
+    "photo": "https://example.com/authors/gabo.jpg",
+    "genres": ["Ficción", "Realismo Mágico"],
+    "awards": ["Premio Nobel de Literatura (1982)"],
+    "booksCount": 1,
+    "createdAt": "2024-01-10T08:00:00Z"
+  },
+  {
+    "id": "author-003",
+    "name": "George Orwell",
+    "bio": "Eric Arthur Blair, conocido por su seudónimo George Orwell, fue un novelista, poeta, ensayista, periodista y crítico británico.",
+    "birthYear": 1903,
+    "deathYear": 1950,
+    "nationality": "Británico",
+    "photo": "https://example.com/authors/orwell.jpg",
+    "genres": ["Ciencia Ficción", "Distopía", "Política"],
+    "booksCount": 1,
+    "createdAt": "2024-01-10T08:00:00Z"
+  },
+  {
+    "id": "author-004",
+    "name": "Harper Lee",
+    "bio": "Nelle Harper Lee fue una escritora estadounidense conocida por su novela Matar a un ruiseñor, publicada en 1960, que se convirtió en un clásico de la literatura estadounidense.",
+    "birthYear": 1926,
+    "deathYear": 2016,
+    "nationality": "Estadounidense",
+    "photo": "https://example.com/authors/harper.jpg",
+    "genres": ["Ficción", "Drama"],
+    "awards": ["Premio Pulitzer (1961)"],
+    "booksCount": 1,
+    "createdAt": "2024-01-10T08:00:00Z"
+  },
+  {
+    "id": "author-005",
+    "name": "Dan Brown",
+    "bio": "Daniel Gerhard Brown es un escritor estadounidense de novelas de suspenso. Es autor de varios libros que han encabezado las listas de best sellers.",
+    "birthYear": 1964,
+    "nationality": "Estadounidense",
+    "photo": "https://example.com/authors/brown.jpg",
+    "website": "https://danbrown.com",
+    "genres": ["Misterio", "Thriller", "Suspense"],
+    "booksCount": 1,
+    "createdAt": "2024-01-10T08:00:00Z"
+  },
+  {
+    "id": "author-006",
+    "name": "F. Scott Fitzgerald",
+    "bio": "Francis Scott Key Fitzgerald fue un novelista estadounidense. Ampliamente considerado como uno de los mejores escritores estadounidenses del siglo XX.",
+    "birthYear": 1896,
+    "deathYear": 1940,
+    "nationality": "Estadounidense",
+    "photo": "https://example.com/authors/fitzgerald.jpg",
+    "genres": ["Ficción", "Romance"],
+    "booksCount": 1,
+    "createdAt": "2024-01-10T08:00:00Z"
+  },
+  {
+    "id": "author-007",
+    "name": "Jane Austen",
+    "bio": "Jane Austen fue una novelista británica que vivió durante la época georgiana. La ironía que emplea para dotar de comicidad a sus novelas hace que Jane Austen sea considerada entre los clásicos de la novela inglesa.",
+    "birthYear": 1775,
+    "deathYear": 1817,
+    "nationality": "Británica",
+    "photo": "https://example.com/authors/austen.jpg",
+    "genres": ["Romance", "Ficción", "Drama"],
+    "booksCount": 1,
+    "createdAt": "2024-01-10T08:00:00Z"
+  },
+  {
+    "id": "author-008",
+    "name": "Miguel de Cervantes",
+    "bio": "Miguel de Cervantes Saavedra fue un novelista, poeta, dramaturgo y soldado español. Es ampliamente considerado como una de las máximas figuras de la literatura española.",
+    "birthYear": 1547,
+    "deathYear": 1616,
+    "nationality": "Español",
+    "photo": "https://example.com/authors/cervantes.jpg",
+    "genres": ["Ficción", "Aventura", "Humor"],
+    "booksCount": 1,
+    "createdAt": "2024-01-10T08:00:00Z"
+  }
+]

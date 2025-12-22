@@ -1,0 +1,97 @@
+[
+  {
+    "id": "user-001",
+    "email": "maria.garcia@example.com",
+    "firstName": "María",
+    "lastName": "García",
+    "username": "mariagarcia",
+    "avatarUrl": "https://example.com/avatars/user-001.jpg",
+    "memberSince": "2023-06-15T10:00:00Z",
+    "preferences": {
+      "favoriteGenres": ["Fantasía", "Aventura"],
+      "language": "es",
+      "notifications": true
+    },
+    "readingList": ["book-001", "book-008"],
+    "favorites": ["book-003", "book-002"],
+    "reviewsCount": 8,
+    "createdAt": "2023-06-15T10:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "user-002",
+    "email": "juan.martinez@example.com",
+    "firstName": "Juan",
+    "lastName": "Martínez",
+    "username": "juanm",
+    "avatarUrl": "https://example.com/avatars/user-002.jpg",
+    "memberSince": "2023-08-20T14:00:00Z",
+    "preferences": {
+      "favoriteGenres": ["Ciencia Ficción", "Distopía"],
+      "language": "es",
+      "notifications": true
+    },
+    "readingList": ["book-004"],
+    "favorites": ["book-004", "book-006"],
+    "reviewsCount": 5,
+    "createdAt": "2023-08-20T14:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "user-003",
+    "email": "ana.lopez@example.com",
+    "firstName": "Ana",
+    "lastName": "López",
+    "username": "analopez",
+    "avatarUrl": "https://example.com/avatars/user-003.jpg",
+    "memberSince": "2024-01-10T09:00:00Z",
+    "preferences": {
+      "favoriteGenres": ["Romance", "Ficción"],
+      "language": "es",
+      "notifications": false
+    },
+    "readingList": ["book-009", "book-007"],
+    "favorites": ["book-005", "book-009"],
+    "reviewsCount": 12,
+    "createdAt": "2024-01-10T09:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "user-004",
+    "email": "carlos.rodriguez@example.com",
+    "firstName": "Carlos",
+    "lastName": "Rodríguez",
+    "username": "carlosr",
+    "avatarUrl": "https://example.com/avatars/user-004.jpg",
+    "memberSince": "2024-02-05T11:00:00Z",
+    "preferences": {
+      "favoriteGenres": ["Misterio", "Thriller"],
+      "language": "es",
+      "notifications": true
+    },
+    "readingList": ["book-006"],
+    "favorites": ["book-006"],
+    "reviewsCount": 3,
+    "createdAt": "2024-02-05T11:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "user-005",
+    "email": "laura.fernandez@example.com",
+    "firstName": "Laura",
+    "lastName": "Fernández",
+    "username": "lauraf",
+    "avatarUrl": "https://example.com/avatars/user-005.jpg",
+    "memberSince": "2024-03-12T13:00:00Z",
+    "preferences": {
+      "favoriteGenres": ["Ficción", "Realismo Mágico"],
+      "language": "es",
+      "notifications": true
+    },
+    "readingList": ["book-003", "book-010"],
+    "favorites": ["book-003"],
+    "reviewsCount": 7,
+    "createdAt": "2024-03-12T13:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  }
+]
