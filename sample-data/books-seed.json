@@ -1,0 +1,252 @@
+[
+  {
+    "id": "book-001",
+    "isbn": "978-0-547928-22-7",
+    "title": "El Señor de los Anillos: La Comunidad del Anillo",
+    "author": {
+      "id": "author-001",
+      "name": "J.R.R. Tolkien"
+    },
+    "categories": ["Fantasía", "Aventura"],
+    "publicationYear": 1954,
+    "language": "es",
+    "pages": 423,
+    "publisher": "Editorial Minotauro",
+    "description": "La Comunidad del Anillo es la primera parte de la trilogía El Señor de los Anillos. La historia comienza en la Comarca, donde el hobbit Frodo Bolsón hereda un anillo mágico de su tío Bilbo.",
+    "coverImage": "https://example.com/covers/lotr1.jpg",
+    "available": true,
+    "rating": 4.8,
+    "reviewCount": 1543,
+    "price": {
+      "amount": 24.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-002",
+    "isbn": "978-0-547928-23-4",
+    "title": "El Señor de los Anillos: Las Dos Torres",
+    "author": {
+      "id": "author-001",
+      "name": "J.R.R. Tolkien"
+    },
+    "categories": ["Fantasía", "Aventura"],
+    "publicationYear": 1954,
+    "language": "es",
+    "pages": 352,
+    "publisher": "Editorial Minotauro",
+    "description": "La Comunidad se ha disuelto y sus integrantes emprenden caminos separados. Frodo y Sam continúan su viaje hacia Mordor para destruir el Anillo.",
+    "coverImage": "https://example.com/covers/lotr2.jpg",
+    "available": true,
+    "rating": 4.7,
+    "reviewCount": 1289,
+    "price": {
+      "amount": 24.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-01-15T10:05:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-003",
+    "isbn": "978-0-307474-27-8",
+    "title": "Cien Años de Soledad",
+    "author": {
+      "id": "author-002",
+      "name": "Gabriel García Márquez"
+    },
+    "categories": ["Ficción", "Realismo Mágico"],
+    "publicationYear": 1967,
+    "language": "es",
+    "pages": 471,
+    "publisher": "Editorial Sudamericana",
+    "description": "Cien años de soledad es una novela del escritor colombiano Gabriel García Márquez. Narra la historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo.",
+    "coverImage": "https://example.com/covers/100anos.jpg",
+    "available": true,
+    "rating": 4.9,
+    "reviewCount": 2341,
+    "price": {
+      "amount": 19.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-01-20T09:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-004",
+    "isbn": "978-0-156907-39-2",
+    "title": "1984",
+    "author": {
+      "id": "author-003",
+      "name": "George Orwell"
+    },
+    "categories": ["Ciencia Ficción", "Distopía"],
+    "publicationYear": 1949,
+    "language": "es",
+    "pages": 328,
+    "publisher": "Debolsillo",
+    "description": "1984 es una novela política de ficción distópica. La historia transcurre en Oceanía, una de las tres superpotencias que se disputan el mundo después de una guerra global.",
+    "coverImage": "https://example.com/covers/1984.jpg",
+    "available": true,
+    "rating": 4.6,
+    "reviewCount": 3456,
+    "price": {
+      "amount": 15.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-02-01T11:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-005",
+    "isbn": "978-0-061120-08-4",
+    "title": "Matar a un Ruiseñor",
+    "author": {
+      "id": "author-004",
+      "name": "Harper Lee"
+    },
+    "categories": ["Ficción", "Drama"],
+    "publicationYear": 1960,
+    "language": "es",
+    "pages": 376,
+    "publisher": "HarperCollins",
+    "description": "Una historia sobre la injusticia racial en el sur profundo de Estados Unidos durante la década de 1930, narrada a través de los ojos de Scout Finch.",
+    "coverImage": "https://example.com/covers/mockingbird.jpg",
+    "available": true,
+    "rating": 4.7,
+    "reviewCount": 2876,
+    "price": {
+      "amount": 17.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-02-10T14:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-006",
+    "isbn": "978-0-385490-81-8",
+    "title": "El Código Da Vinci",
+    "author": {
+      "id": "author-005",
+      "name": "Dan Brown"
+    },
+    "categories": ["Misterio", "Thriller"],
+    "publicationYear": 2003,
+    "language": "es",
+    "pages": 512,
+    "publisher": "Doubleday",
+    "description": "Un thriller que combina historia del arte, criptografía y teorías de conspiración. El profesor Robert Langdon investiga un misterioso asesinato en el Louvre.",
+    "coverImage": "https://example.com/covers/davinci.jpg",
+    "available": true,
+    "rating": 4.3,
+    "reviewCount": 4523,
+    "price": {
+      "amount": 16.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-03-05T10:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-007",
+    "isbn": "978-0-743273-56-5",
+    "title": "El Gran Gatsby",
+    "author": {
+      "id": "author-006",
+      "name": "F. Scott Fitzgerald"
+    },
+    "categories": ["Ficción", "Romance"],
+    "publicationYear": 1925,
+    "language": "es",
+    "pages": 180,
+    "publisher": "Scribner",
+    "description": "Una crítica de la sociedad estadounidense de los años 20, centrada en el misterioso millonario Jay Gatsby y su obsesión por Daisy Buchanan.",
+    "coverImage": "https://example.com/covers/gatsby.jpg",
+    "available": true,
+    "rating": 4.4,
+    "reviewCount": 3102,
+    "price": {
+      "amount": 14.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-03-15T12:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-008",
+    "isbn": "978-0-544003-41-5",
+    "title": "El Hobbit",
+    "author": {
+      "id": "author-001",
+      "name": "J.R.R. Tolkien"
+    },
+    "categories": ["Fantasía", "Aventura", "Infantil"],
+    "publicationYear": 1937,
+    "language": "es",
+    "pages": 310,
+    "publisher": "Editorial Minotauro",
+    "description": "Bilbo Bolsón es un hobbit que disfruta de una vida cómoda hasta que el mago Gandalf lo elige para una aventura inesperada junto a un grupo de enanos.",
+    "coverImage": "https://example.com/covers/hobbit.jpg",
+    "available": true,
+    "rating": 4.7,
+    "reviewCount": 2145,
+    "price": {
+      "amount": 18.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-04-01T09:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-009",
+    "isbn": "978-0-451524-93-4",
+    "title": "Orgullo y Prejuicio",
+    "author": {
+      "id": "author-007",
+      "name": "Jane Austen"
+    },
+    "categories": ["Romance", "Ficción"],
+    "publicationYear": 1813,
+    "language": "es",
+    "pages": 432,
+    "publisher": "Penguin Classics",
+    "description": "La historia de Elizabeth Bennet y el orgulloso Sr. Darcy, una de las historias de amor más famosas de la literatura inglesa.",
+    "coverImage": "https://example.com/covers/pride.jpg",
+    "available": true,
+    "rating": 4.6,
+    "reviewCount": 2789,
+    "price": {
+      "amount": 12.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-04-15T11:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-010",
+    "isbn": "978-0-142437-24-7",
+    "title": "Don Quijote de la Mancha",
+    "author": {
+      "id": "author-008",
+      "name": "Miguel de Cervantes"
+    },
+    "categories": ["Ficción", "Aventura", "Humor"],
+    "publicationYear": 1605,
+    "language": "es",
+    "pages": 863,
+    "publisher": "Ediciones Cátedra",
+    "description": "Las aventuras del ingenioso hidalgo Don Quijote y su fiel escudero Sancho Panza, considerada una de las mejores obras de la literatura universal.",
+    "coverImage": "https://example.com/covers/quijote.jpg",
+    "available": true,
+    "rating": 4.5,
+    "reviewCount": 1876,
+    "price": {
+      "amount": 22.99,
+      "currency": "USD"
+    },
+    "createdAt": "2024-05-01T10:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  }
+]

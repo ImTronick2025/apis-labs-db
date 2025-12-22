@@ -1,0 +1,33 @@
+# Secrets y configuraciones sensibles
+*.env
+.env
+.env.local
+secrets/
+*.key
+*.pem
+
+# Archivos temporales
+*.tmp
+*.temp
+~$*
+
+# Logs
+*.log
+logs/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Azure
+.azure/

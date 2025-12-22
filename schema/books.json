@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Book",
+  "description": "Esquema de documento para libros en Cosmos DB",
+  "type": "object",
+  "required": ["id", "isbn", "title", "author", "categories", "publicationYear", "language"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identificador único del libro (formato: book-XXX)",
+      "pattern": "^book-[0-9]{3,}$"
+    },
+    "isbn": {
+      "type": "string",
+      "description": "ISBN-13 del libro",
+      "pattern": "^978-[0-9]-[0-9]{6}-[0-9]{2}-[0-9]$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Título del libro",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "author": {
+      "type": "object",
+      "description": "Información del autor principal",
+      "required": ["id", "name"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^author-[0-9]{3,}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "description": "Categorías/géneros del libro",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "enum": [
+          "Ficción",
+          "No Ficción",
+          "Fantasía",
+          "Ciencia Ficción",
+          "Misterio",
+          "Thriller",
+          "Romance",
+          "Historia",
+          "Biografía",
+          "Tecnología",
+          "Negocios",
+          "Autoayuda",
+          "Poesía",
+          "Drama",
+          "Aventura",
+          "Terror",
+          "Humor",
+          "Infantil",
+          "Juvenil",
+          "Ensayo"
+        ]
+      }
+    },
+    "publicationYear": {
+      "type": "integer",
+      "description": "Año de publicación",
+      "minimum": 1000,
+      "maximum": 2100
+    },
+    "language": {
+      "type": "string",
+      "description": "Código de idioma ISO 639-1",
+      "pattern": "^[a-z]{2}$",
+      "examples": ["es", "en", "fr", "de"]
+    },
+    "pages": {
+      "type": "integer",
+      "description": "Número de páginas",
+      "minimum": 1
+    },
+    "publisher": {
+      "type": "string",
+      "description": "Editorial",
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "description": "Descripción o sinopsis del libro",
+      "maxLength": 2000
+    },
+    "coverImage": {
+      "type": "string",
+      "description": "URL de la imagen de portada",
+      "format": "uri"
+    },
+    "available": {
+      "type": "boolean",
+      "description": "Disponibilidad del libro",
+      "default": true
+    },
+    "rating": {
+      "type": "number",
+      "description": "Valoración promedio (0-5)",
+      "minimum": 0,
+      "maximum": 5
+    },
+    "reviewCount": {
+      "type": "integer",
+      "description": "Número de reseñas",
+      "minimum": 0,
+      "default": 0
+    },
+    "price": {
+      "type": "object",
+      "description": "Información de precio",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "pattern": "^[A-Z]{3}$",
+          "examples": ["USD", "EUR", "MXN"]
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "Fecha de creación del registro",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "description": "Fecha de última actualización",
+      "format": "date-time"
+    }
+  }
+}

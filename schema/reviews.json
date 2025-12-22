@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Review",
+  "description": "Esquema de documento para reseñas de libros",
+  "type": "object",
+  "required": ["id", "bookId", "userId", "userName", "rating", "createdAt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identificador único de la reseña",
+      "pattern": "^review-[0-9]{3,}$"
+    },
+    "bookId": {
+      "type": "string",
+      "description": "ID del libro reseñado (partition key)",
+      "pattern": "^book-[0-9]{3,}$"
+    },
+    "userId": {
+      "type": "string",
+      "description": "ID del usuario que hace la reseña"
+    },
+    "userName": {
+      "type": "string",
+      "description": "Nombre del usuario",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "rating": {
+      "type": "integer",
+      "description": "Valoración del libro (1-5 estrellas)",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "title": {
+      "type": "string",
+      "description": "Título de la reseña",
+      "maxLength": 100
+    },
+    "comment": {
+      "type": "string",
+      "description": "Comentario/reseña del usuario",
+      "maxLength": 1000
+    },
+    "helpful": {
+      "type": "integer",
+      "description": "Número de usuarios que encontraron útil la reseña",
+      "minimum": 0,
+      "default": 0
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "Si es una compra verificada",
+      "default": false
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "Fecha de creación de la reseña",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "description": "Fecha de última actualización",
+      "format": "date-time"
+    }
+  }
+}
