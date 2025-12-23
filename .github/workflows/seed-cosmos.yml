@@ -14,11 +14,6 @@ jobs:
     permissions:
       id-token: write
       contents: read
-    env:
-      COSMOS_ACCOUNT_NAME: ${{ vars.COSMOS_ACCOUNT_NAME }}
-      COSMOS_RESOURCE_GROUP: ${{ vars.COSMOS_RESOURCE_GROUP }}
-      COSMOS_DATABASE: ${{ vars.COSMOS_DATABASE }}
-      COSMOS_CONTAINER: ${{ vars.COSMOS_CONTAINER }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,14 +28,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          ACCOUNT="${COSMOS_ACCOUNT_NAME:-}"
-          RG="${COSMOS_RESOURCE_GROUP:-}"
-          if [ -z "$ACCOUNT" ] || [ -z "$RG" ]; then
-            ACCOUNT=$(az cosmosdb list --query "[0].name" -o tsv)
-            RG=$(az cosmosdb list --query "[0].resourceGroup" -o tsv)
-          fi
-          DB="${COSMOS_DATABASE:-apis-labs-db}"
-          CONTAINER="${COSMOS_CONTAINER:-books}"
+          ACCOUNT="apislabsdev-cosmos-lshkrw"
+          RG="apis-labs-dev-rg"
+          DB="apis-labs-db"
+          CONTAINER="books"
           ENDPOINT=$(az cosmosdb show --name "$ACCOUNT" --resource-group "$RG" --query documentEndpoint -o tsv)
           KEY=$(az cosmosdb keys list --name "$ACCOUNT" --resource-group "$RG" --query primaryMasterKey -o tsv)
           echo "::add-mask::$KEY"
