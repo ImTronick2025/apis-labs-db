@@ -1,0 +1,104 @@
+name: Seed Cosmos DB Data
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "sample-data/**.json"
+      - ".github/workflows/seed-cosmos.yml"
+
+jobs:
+  seed-and-validate:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    env:
+      COSMOS_ACCOUNT_NAME: ${{ vars.COSMOS_ACCOUNT_NAME }}
+      COSMOS_RESOURCE_GROUP: ${{ vars.COSMOS_RESOURCE_GROUP }}
+      COSMOS_DATABASE: ${{ vars.COSMOS_DATABASE }}
+      COSMOS_CONTAINER: ${{ vars.COSMOS_CONTAINER }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Resolve Cosmos settings
+        id: cosmos
+        shell: bash
+        run: |
+          set -euo pipefail
+          ACCOUNT="${COSMOS_ACCOUNT_NAME:-}"
+          RG="${COSMOS_RESOURCE_GROUP:-}"
+          if [ -z "$ACCOUNT" ] || [ -z "$RG" ]; then
+            ACCOUNT=$(az cosmosdb list --query "[0].name" -o tsv)
+            RG=$(az cosmosdb list --query "[0].resourceGroup" -o tsv)
+          fi
+          DB="${COSMOS_DATABASE:-apis-labs-db}"
+          CONTAINER="${COSMOS_CONTAINER:-books}"
+          ENDPOINT=$(az cosmosdb show --name "$ACCOUNT" --resource-group "$RG" --query documentEndpoint -o tsv)
+          KEY=$(az cosmosdb keys list --name "$ACCOUNT" --resource-group "$RG" --query primaryMasterKey -o tsv)
+          echo "::add-mask::$KEY"
+          echo "account=$ACCOUNT" >> "$GITHUB_OUTPUT"
+          echo "resource_group=$RG" >> "$GITHUB_OUTPUT"
+          echo "database=$DB" >> "$GITHUB_OUTPUT"
+          echo "container=$CONTAINER" >> "$GITHUB_OUTPUT"
+          echo "endpoint=$ENDPOINT" >> "$GITHUB_OUTPUT"
+          echo "key=$KEY" >> "$GITHUB_OUTPUT"
+
+      - name: Seed and validate
+        shell: bash
+        env:
+          COSMOS_ENDPOINT: ${{ steps.cosmos.outputs.endpoint }}
+          COSMOS_KEY: ${{ steps.cosmos.outputs.key }}
+          COSMOS_DATABASE: ${{ steps.cosmos.outputs.database }}
+          COSMOS_CONTAINER: ${{ steps.cosmos.outputs.container }}
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet azure-cosmos
+          python - << 'PY'
+          import json
+          import os
+          from azure.cosmos import CosmosClient, exceptions, PartitionKey
+          
+          endpoint = os.environ["COSMOS_ENDPOINT"]
+          key = os.environ["COSMOS_KEY"]
+          database_name = os.environ["COSMOS_DATABASE"]
+          container_name = os.environ["COSMOS_CONTAINER"]
+          
+          client = CosmosClient(endpoint, key)
+          database = client.create_database_if_not_exists(id=database_name)
+          container = database.create_container_if_not_exists(
+              id=container_name,
+              partition_key=PartitionKey(path="/id")
+          )
+          
+          with open("sample-data/books-seed.json", "r", encoding="utf-8") as f:
+              books = json.load(f)
+          
+          inserted = 0
+          for book in books:
+              try:
+                  container.upsert_item(book)
+                  inserted += 1
+              except exceptions.CosmosHttpResponseError as exc:
+                  raise SystemExit(f"Failed to upsert {book.get('id')}: {exc.message}")
+          
+          count = 0
+          for _ in container.query_items("SELECT VALUE COUNT(1) FROM c", enable_cross_partition_query=True):
+              count += _
+          
+          sample = list(container.query_items(
+              "SELECT TOP 5 c.id, c.title FROM c",
+              enable_cross_partition_query=True
+          ))
+          
+          print(f"Upserted: {inserted}")
+          print(f"Count: {count}")
+          print("Sample:", sample)
+          PY
