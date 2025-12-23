@@ -1,0 +1,32 @@
+name: Validate Cosmos DB Data Model
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          set -euo pipefail
+          if [ ! -d "schema" ] && [ ! -d "sample-data" ]; then
+            echo "Missing schema/ or sample-data/ directories" >&2
+            exit 1
+          fi
+          files=$(find schema sample-data -type f -name "*.json" 2>/dev/null || true)
+          if [ -z "$files" ]; then
+            echo "No JSON files found in schema/ or sample-data/" >&2
+            exit 1
+          fi
+          for f in $files; do
+            python -m json.tool "$f" > /dev/null
+          done
+          echo "JSON validation OK"
