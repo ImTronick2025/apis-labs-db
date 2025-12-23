@@ -249,4 +249,130 @@
     "createdAt": "2024-05-01T10:00:00Z",
     "updatedAt": "2024-12-22T15:30:00Z"
   }
+,
+  {
+    "id": "book-011",
+    "isbn": "978-0-307-27846-4",
+    "title": "Rayuela",
+    "author": {
+      "id": "author-009",
+      "name": "Julio Cortazar"
+    },
+    "categories": ["Ficcion", "Clasico"],
+    "publicationYear": 1963,
+    "language": "es",
+    "pages": 736,
+    "publisher": "Editorial Sudamericana",
+    "description": "Novela emblematico del boom latinoamericano que invita a leerla en varios ordenes.",
+    "coverImage": "https://example.com/covers/rayuela.jpg",
+    "available": true,
+    "rating": 4.6,
+    "reviewCount": 1420,
+    "price": {
+      "amount": 18.5,
+      "currency": "USD"
+    },
+    "createdAt": "2024-05-15T10:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-012",
+    "isbn": "978-0-140-17073-6",
+    "title": "La Ciudad y los Perros",
+    "author": {
+      "id": "author-010",
+      "name": "Mario Vargas Llosa"
+    },
+    "categories": ["Ficcion", "Drama"],
+    "publicationYear": 1963,
+    "language": "es",
+    "pages": 448,
+    "publisher": "Seix Barral",
+    "description": "Historia sobre cadetes en una escuela militar y las tensiones de poder.",
+    "coverImage": "https://example.com/covers/ciudad-perros.jpg",
+    "available": true,
+    "rating": 4.5,
+    "reviewCount": 980,
+    "price": {
+      "amount": 17.25,
+      "currency": "USD"
+    },
+    "createdAt": "2024-05-20T10:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-013",
+    "isbn": "978-1-4516-7331-9",
+    "title": "Fahrenheit 451",
+    "author": {
+      "id": "author-011",
+      "name": "Ray Bradbury"
+    },
+    "categories": ["Ciencia Ficcion", "Distopia"],
+    "publicationYear": 1953,
+    "language": "es",
+    "pages": 249,
+    "publisher": "Ballantine Books",
+    "description": "Una sociedad donde los libros son prohibidos y los bomberos los destruyen.",
+    "coverImage": "https://example.com/covers/f451.jpg",
+    "available": true,
+    "rating": 4.4,
+    "reviewCount": 2105,
+    "price": {
+      "amount": 14.75,
+      "currency": "USD"
+    },
+    "createdAt": "2024-05-25T10:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-014",
+    "isbn": "978-0-307-27909-6",
+    "title": "Crimen y Castigo",
+    "author": {
+      "id": "author-012",
+      "name": "Fyodor Dostoevsky"
+    },
+    "categories": ["Clasico", "Drama"],
+    "publicationYear": 1866,
+    "language": "es",
+    "pages": 671,
+    "publisher": "Penguin Classics",
+    "description": "Relato sobre la culpa y la redencion tras un asesinato en San Petersburgo.",
+    "coverImage": "https://example.com/covers/crimen-castigo.jpg",
+    "available": true,
+    "rating": 4.6,
+    "reviewCount": 1320,
+    "price": {
+      "amount": 16.5,
+      "currency": "USD"
+    },
+    "createdAt": "2024-05-30T10:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  },
+  {
+    "id": "book-015",
+    "isbn": "978-0-152-04486-5",
+    "title": "El Nombre de la Rosa",
+    "author": {
+      "id": "author-013",
+      "name": "Umberto Eco"
+    },
+    "categories": ["Misterio", "Historico"],
+    "publicationYear": 1980,
+    "language": "es",
+    "pages": 512,
+    "publisher": "Harcourt",
+    "description": "Un monje investigador resuelve asesinatos en una abadia medieval.",
+    "coverImage": "https://example.com/covers/nombre-rosa.jpg",
+    "available": true,
+    "rating": 4.5,
+    "reviewCount": 1194,
+    "price": {
+      "amount": 19.0,
+      "currency": "USD"
+    },
+    "createdAt": "2024-06-05T10:00:00Z",
+    "updatedAt": "2024-12-22T15:30:00Z"
+  }
 ]
